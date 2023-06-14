@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/components/screen_components/screen_components.dart';
+import 'package:whatsapp_clone/modules/home_screen/chat_screen.dart';
 
 
 //List<user> Users = [user(name: "Zeyad",
@@ -45,7 +46,9 @@ class _home_screenState extends State<home_screen> {
                     PopupMenuItem(
                       value: 1,
                       child: TextButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          
+                        },
                         child: Text(
                             "New Group",
                           style: TextStyle(
@@ -73,7 +76,11 @@ class _home_screenState extends State<home_screen> {
                     PopupMenuItem(
                       value: 3,
                       child: TextButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          setState(() {
+
+                          });
+                        },
                         child: Text(
                           "Linked Devices",
                           style: TextStyle(
@@ -183,12 +190,12 @@ Widget messageBuilder(BuildContext context,int index){
     subtitle: Text("Hi, where are you?"),//Users[index].lastMsg
     trailing: Text("10:36",
     style: TextStyle(
-      color:
+      color:Colors.black,
     ),
     ),//Users[index].date
     onTap: (){
       Navigator.push(context,
-        MaterialPageRoute(builder: (context) => ErrorWidget.withDetails(), //whats_chat(),
+        MaterialPageRoute(builder: (context) => chat_screen(), //whats_chat(),
         ),
       );
 
